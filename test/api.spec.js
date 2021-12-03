@@ -1,5 +1,6 @@
 const request = require('supertest');
 const app = require('../server');
+const avatars = require('../data')
 
 describe('API server', () => {
     let api;
@@ -18,14 +19,13 @@ describe('API server', () => {
     });
 
     it('responds to get /avatars with status of 200', (done) => {
-        request(api.get('/avatars').expect(200, done));
+        request(api).get('/avatars').expect(200, done);
     });
     it('retrieves an avatar by id', (done) => {
         request(api)
             .get('/avatars/3')
             .expect(200)
             .expect({id: 3, name: "Anna", health: 110, strength: 6, endurance: 9}, done)
-
     });
 
 });
