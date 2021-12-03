@@ -17,4 +17,15 @@ describe('API server', () => {
         request(api).get('/').expect(200, done);
     });
 
+    it('responds to get /avatars with status of 200', (done) => {
+        request(api.get('/avatars').expect(200, done));
+    });
+    it('retrieves an avatar by id', (done) => {
+        request(api)
+            .get('/avatars/3')
+            .expect(200)
+            .expect({id: 3, name: "Anna", health: 110, strength: 6, endurance: 9}, done)
+
+    });
+
 });
