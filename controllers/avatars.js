@@ -3,7 +3,7 @@
 const express = require('express')
 const router = express.Router();
 const avatars = require('../data');
-const Avatar = require('../models/avatar')
+const Avatar = require('../models/avatars')
 
 // app.get('/cats', (req, res) => {
 //     res.send(cats);
