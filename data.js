@@ -8,3 +8,4 @@ const avatars = [
 ]
 
 module.exports = avatars;
+
