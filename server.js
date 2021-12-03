@@ -3,8 +3,9 @@ const app = express();
 const port = 3000;
 const avatarRoutes = require('./controllers/avatars')
 
+
 app.get('/', (req, res) => {
-    res.send('I will not go into backend!');
+    res.send('I will not go into backend, frontend is the best!');
 });
 
 app.use('/avatars', avatarRoutes)

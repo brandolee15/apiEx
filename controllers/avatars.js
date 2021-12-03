@@ -5,10 +5,6 @@ const router = express.Router();
 const avatars = require('../data');
 const Avatar = require('../models/avatars')
 
-// app.get('/cats', (req, res) => {
-//     res.send(cats);
-// });
-
 router.get('/', (req, res) => {
     const avatars = Avatar.all;
     res.send(avatars);
